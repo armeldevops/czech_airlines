@@ -25,7 +25,7 @@ const Courses = () => {
         </Card>
 
         {/* Video Card */}
-        <Link href='/video'>
+        <Link href='/courses/video'>
           <Card className="w-[350px] h-[350px] sm:w-[300px] md:w-[350px] lg:w-[350px] cursor-pointer bg-gradient-to-r from-white to-foreground/20 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
             <CardContent className="flex flex-col items-center justify-center h-full">
               <Image 

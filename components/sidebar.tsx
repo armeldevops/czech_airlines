@@ -16,6 +16,7 @@ import SearchBlack from "@/public/Black/search.png";
 import UserRound from "@/public/Yellow/user.png";
 import UserRoundBlack from "@/public/Black/user.png";
 import { ModeToggle } from "./mode";
+import Link from "next/link";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -31,7 +32,7 @@ const Sidebar = () => {
     {
       icon: Courses,
       iconBlack: CoursesBlack,
-      href: '/courses/create',
+      href: '/courses',
       label: 'Courses',
     },
     {
@@ -68,38 +69,42 @@ const Sidebar = () => {
     <div
       className={cn(
         "h-full bg-primary/20 rounded-r-[50px] shadow flex flex-col items-center group transition-all duration-300",
-        "w-20 hover:w-64"
+        "w-28 hover:w-64"
       )}
     >
       {/* Logo */}
       <div className="relative mt-6">
         {/* Image par défaut (visible par défaut) */}
-        <Image
-          src="/atps-default.png"
-          height={20}
-          width={40}
-          alt="ATPS Default Logo"
-          className="block group-hover:hidden transition-opacity duration-300"
-        />
+        <Link href='/'>
+          <Image
+            src="/atps-default.png"
+            height={20}
+            width={40}
+            alt="ATPS Default Logo"
+            className="block group-hover:hidden transition-opacity duration-300"
+          />
+        </Link>
         {/* Image au survol (visible seulement en hover) */}
-        <Image
-          src="/atps.png"
-          height={40}
-          width={80}
-          alt="ATPS Logo"
-          className="hidden group-hover:block transition-opacity duration-300"
-        />
+        <Link href='/'>
+          <Image
+            src="/atps.png"
+            height={120}
+            width={120}
+            alt="ATPS Logo"
+            className="hidden group-hover:block transition-opacity duration-300"
+          />
+        </Link>
       </div>
 
       {/* Navigation */}
-      <div className="p-4 flex-1 flex justify-center items-center w-full">
+      <div className="p-4 flex-1 flex justify-center items-center">
         <div className="space-y-2 w-full">
           {routes.map((route) => (
             <div
               onClick={() => onNavigate(route.href)}
               key={route.href}
               className={cn(
-                "group flex items-center p-3 cursor-pointer transition-colors duration-300 hover:text-[#EECE84] hover:bg-primary/10 rounded-full",
+                "group flex items-center p-4 cursor-pointer transition-colors duration-300 hover:text-[#EECE84] hover:bg-primary/10 rounded-full",
                 pathname === route.href && "bg-primary/10 text-[#EECE84] shadow"
               )}
             >
@@ -108,7 +113,7 @@ const Sidebar = () => {
                 src={route.iconBlack}
                 alt={route.label}
                 className={cn(
-                  "h-5 w-5 mr-0 group-hover:mr-3 transition-all duration-300 ml-0.5 group-hover:hidden",
+                  "h-7 w-7 mr-0 group-hover:mr-3 transition-all duration-300 group-hover:hidden",
                   pathname === route.href && "hidden"
                 )}
               />
@@ -117,12 +122,12 @@ const Sidebar = () => {
                 src={route.icon}
                 alt={route.label}
                 className={cn(
-                  "h-5 w-5 mr-0 group-hover:mr-3 transition-all duration-300 ml-0.5 hidden group-hover:block",
+                  "h-7 w-7 mr-0 group-hover:mr-3 transition-all duration-300 hidden group-hover:block",
                   pathname === route.href && "block"
                 )}
               />
               {/* Label */}
-              <span className="hidden group-hover:inline-block text-sm font-medium transition-opacity duration-300">
+              <span className="hidden group-hover:inline-block font-medium transition-opacity duration-300">
                 {route.label}
               </span>
             </div>
