@@ -1,14 +1,17 @@
 'use client'
 
 import SearchBar from '@/components/SearcBar';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import { support } from '@/lib/support';
+import { ChevronRight, Mail } from 'lucide-react';
 import React, { useState } from 'react';
 
 const SupportPage = () => {
   const [activeId, setActiveId] = useState<number | null>(null); // État pour gérer l'élément actif
 
   return (
-    <div className="min-h-screen max-w-7xl mx-auto p-7 flex flex-col">
+    <div className="min-h-screen max-w-7xl mx-auto p-7 ">
       {/* Barre de recherche */}
       <div className="flex items-center justify-center mt-10">
         <SearchBar />
@@ -20,33 +23,37 @@ const SupportPage = () => {
       </div>
 
       {/* Contenu principal */}
-      <div className="flex flex-row gap-10 mt-10">
+      <div className="flex flex-row">
         {/* Liste des questions à gauche */}
-        <div className="flex flex-col border border-white bg-white rounded-t-xl w-1/3">
+        <div className="flex flex-col w-1/2 bg-white shadow-lg rounded-lg mt-10w-[250px] h-full mt-28">
           {support.map((item) => (
-            <div
+            <>
+              <div
               key={item.id}
-              className={`shadow-lg overflow-hidden p-4 cursor-pointer transition-all duration-300 ${
-                activeId === item.id ? ' bg-yellow-600/50' : 'bg-white'
+              className={`flex items-center justify-between cursor-pointer transition-all duration-300 rounded-md p-6 ${
+                activeId === item.id ? 'bg-yellow-600/50' : 'text-black'
               }`}
-              onClick={() => setActiveId(item.id)} // Définit la question active
+              onClick={() => setActiveId(item.id)}
             >
               <div className="flex items-center gap-4">
                 <div
-                  className={`h-6 w-6 rounded-full ${
+                  className={`h-4 w-4 rounded-full ${
                     activeId === item.id ? 'bg-black' : 'bg-yellow-600/50'
                   }`}
-                />
-                <h2 className="text-lg font-bold">{item.title}</h2>
+                ></div>
+                <h2 className="text-sm font-medium">{item.title}</h2>
               </div>
+              <ChevronRight className={activeId === item.id ? '' : 'text-yellow-600/50'} />
             </div>
+            <Separator />
+            </>
           ))}
         </div>
 
         {/* Carte de détails à droite */}
-        <div className="flex-1">
+        <div className="flex-1 mt-10">
           {activeId !== null ? (
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white shadow-lg rounded-lg p-10 w-[600px] h-[500px] border border-yellow-600/50">
               <h2 className="text-2xl font-extrabold mb-4">
                 {support.find((item) => item.id === activeId)?.title}
               </h2>
@@ -61,6 +68,10 @@ const SupportPage = () => {
           )}
         </div>
       </div>
+      <Button className='bg-yellow-600/60 rounded-full text-black hover:bg-yellow-600/50 mt-10 h-12 w-36'>
+        <Mail />
+        Contact Us
+      </Button>
     </div>
   );
 };
