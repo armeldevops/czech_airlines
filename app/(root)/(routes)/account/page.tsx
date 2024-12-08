@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button';
-import { ArrowBigUpDash, LogOut, Trash } from 'lucide-react';
+import { ArrowBigUpDash, Edit, LogOut, Trash } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 import {
@@ -50,7 +50,7 @@ const Page = () => {
               <span className="block text-gray-500 text-sm">armelmanombosoa@gmail.com</span>
             </div>
           </div>
-          <Button className='rounded-full bg-yellow-600 hover:bg-yellow-600/80'>
+          <Button className='rounded-full bg-yellow-600/60 hover:bg-yellow-600/50 text-black'>
             <LogOut size={20} />
             <span>Sign out</span>
           </Button>
@@ -188,10 +188,11 @@ const Page = () => {
       </div>
       {/* Delete Account Button */}
       <div className="flex justify-end gap-2 p-6">
-        <Button type="submit" className="rounded-full bg-yellow-600 hover:bg-yellow-600/80">
+        <Button type="submit" className="rounded-full bg-yellow-600/60 hover:bg-yellow-600/50 text-black">
+          <Edit />
           Save Changes
         </Button>
-        <Button className="rounded-full" variant="destructive">
+        <Button className="rounded-full bg-white text-red-600 hover:bg-white/80 hover:text-red-600">
           <Trash size={20} />
           <span>Delete Account</span>
         </Button>

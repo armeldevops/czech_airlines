@@ -15,7 +15,7 @@ const SearchPage = () => {
         <Button
           onClick={() => setActiveTab('Courses')}
           className={`rounded-full px-4 py-2 font-medium ${
-            activeTab === 'Courses' ? 'bg-yellow-500 text-black hover:bg-yellow-500/80' : 'bg-transparent border-none shadow-none hover:bg-transparent text-black'
+            activeTab === 'Courses' ? 'bg-yellow-600/60 text-black hover:bg-yellow-600/50' : 'bg-transparent border-none shadow-none hover:bg-transparent text-black'
           }`}
         >
           Courses
@@ -23,7 +23,7 @@ const SearchPage = () => {
         <Button
           onClick={() => setActiveTab('Questions')}
           className={`rounded-full px-4 py-2 font-medium ${
-            activeTab === 'Questions' ? 'bg-yellow-500 text-black hover:bg-yellow-500/80' : 'bg-transparent border-none shadow-none hover:bg-transparent text-black'
+            activeTab === 'Questions' ? 'bg-yellow-600/60 text-black hover:bg-yellow-600/50' : 'bg-transparent border-none shadow-none hover:bg-transparent text-black'
           }`}
         >
           Questions

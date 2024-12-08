@@ -31,19 +31,19 @@ const SupportPage = () => {
               <div
               key={item.id}
               className={`flex items-center justify-between cursor-pointer transition-all duration-300 rounded-md p-6 ${
-                activeId === item.id ? 'bg-yellow-600/50' : 'text-black'
+                activeId === item.id ? 'bg-yellow-600/60' : 'text-black'
               }`}
               onClick={() => setActiveId(item.id)}
             >
               <div className="flex items-center gap-4">
                 <div
                   className={`h-4 w-4 rounded-full ${
-                    activeId === item.id ? 'bg-black' : 'bg-yellow-600/50'
+                    activeId === item.id ? 'bg-black' : 'bg-yellow-600/60'
                   }`}
                 ></div>
                 <h2 className="text-sm font-medium">{item.title}</h2>
               </div>
-              <ChevronRight className={activeId === item.id ? '' : 'text-yellow-600/50'} />
+              <ChevronRight className={activeId === item.id ? '' : 'text-yellow-600/60'} />
             </div>
             <Separator />
             </>
@@ -53,7 +53,7 @@ const SupportPage = () => {
         {/* Carte de détails à droite */}
         <div className="flex-1 mt-10">
           {activeId !== null ? (
-            <div className="bg-white shadow-lg rounded-lg p-10 w-[600px] h-[500px] border border-yellow-600/50">
+            <div className="bg-white shadow-lg rounded-lg p-10 w-[600px] h-[500px] border border-yellow-600/60">
               <h2 className="text-2xl font-extrabold mb-4">
                 {support.find((item) => item.id === activeId)?.title}
               </h2>

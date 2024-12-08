@@ -12,10 +12,10 @@ import {
 export function SelectVideo() {
   return (
     <Select>
-      <SelectTrigger className="w-[300px] border-yellow-500 rounded-full py-6 bg-yellow-500">
+      <SelectTrigger className="w-[300px] border-yellow-600/60 rounded-full py-6 bg-yellow-600/60">
         <SelectValue placeholder="Syllabus" />
       </SelectTrigger>
-      <SelectContent className="border-yellow-500 rounded-xl bg-yellow-500">
+      <SelectContent className="border-yellow-600/60 rounded-xl bg-yellow-600/60">
         <SelectGroup>
           <SelectItem value="radio">Radio Navigation</SelectItem>
           <SelectItem value="air">Air law</SelectItem>
