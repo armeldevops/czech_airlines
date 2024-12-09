@@ -36,7 +36,7 @@ const LessonDetailPage = ({ params }: Props) => {
       <Button variant='ghost' className='hover:bg-transparent'>
         <Link href='/courses/video' className='flex flex-row items-center gap-1'>
           <ChevronLeft className='w-6 h-6' />
-          <span className='text-2xl'>Videos</span>
+          <span className='text-2xl'>Manuals</span>
         </Link>
       </Button>
       <div className='space-y-8 p-6'>

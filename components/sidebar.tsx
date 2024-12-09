@@ -38,7 +38,7 @@ const Sidebar = () => {
     {
       icon: Questions,
       iconBlack: QuestionsBlack,
-      href: '/questions/create',
+      href: '/questions-bank',
       label: 'Questions Bank',
     },
     {

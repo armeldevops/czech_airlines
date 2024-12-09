@@ -10,7 +10,7 @@ const SubAccount = () => {
       <Button variant='ghost' className='hover:bg-transparent'>
         <Link href='/account' className='flex flex-row items-center gap-1'>
           <ChevronLeft className='w-6 h-6' />
-          <span className='text-2xl'>Back to your profile</span>
+          <span className='text-2xl'>BBack to Profile</span>
         </Link>
       </Button>
 
@@ -20,7 +20,7 @@ const SubAccount = () => {
       </div>
 
       <div className='flex flex-row gap-4 p-5'>
-        <div className="bg-white shadow-lg rounded-3xl border-2 border-yellow-500 overflow-hidden w-[320px]">
+        <div className="bg-white shadow-lg rounded-3xl border-4 border-[#EECE84] overflow-hidden w-[320px]">
           <div className="p-6">
             <div className='justify-between flex'>
               <div className='flex flex-col'>
@@ -28,7 +28,7 @@ const SubAccount = () => {
                 <span className='text-xl'>€10/month</span>
               </div>
               <div>
-              <Badge className='rounded-full text-xs bg-yellow-500 hover:bg-yellow-500/80'>Saving €180</Badge>
+              <Badge className='rounded-full text-xs bg-[#EECE84] hover:bg-[#EECE84] text-black dark:text-white'>Saving €180</Badge>
               </div>
             </div>
             <div className="mt-4">
@@ -44,7 +44,7 @@ const SubAccount = () => {
                 <span className='text-xl'>€15/month</span>
               </div>
               <div>
-              <Badge className='rounded-full text-xs bg-yellow-500 hover:bg-yellow-500/80'>Saving €60</Badge>
+              <Badge className='rounded-full text-xs bg-[#EECE84] hover:bg-[#EECE84] text-black dark:text-white'>Saving €60</Badge>
               </div>
             </div>
             <div className="mt-4">
@@ -60,7 +60,7 @@ const SubAccount = () => {
                 <span className='text-xl'>€20/month</span>
               </div>
               <div>
-              <Badge className='rounded-full text-xs bg-yellow-500 hover:bg-yellow-500/80'>Saving €15</Badge>
+              <Badge className='rounded-full text-xs bg-[#EECE84] hover:bg-[#EECE84] text-black dark:text-white'>Saving €15</Badge>
               </div>
             </div>
             <div className="mt-4">
@@ -97,7 +97,7 @@ const SubAccount = () => {
                 <span className='text-xl'>€30/month</span>
               </div>
               <div>
-              <Badge className='rounded-full text-xs bg-yellow-500 hover:bg-yellow-500/80'>Saving €180</Badge>
+              <Badge className='rounded-full text-xs bg-[#EECE84] hover:bg-[#EECE84] text-black dark:text-white'>Saving €180</Badge>
               </div>
             </div>
             <div className="mt-4">
@@ -113,7 +113,7 @@ const SubAccount = () => {
                 <span className='text-xl'>€35/month</span>
               </div>
               <div>
-              <Badge className='rounded-full text-xs bg-yellow-500 hover:bg-yellow-500/80'>Saving €60</Badge>
+              <Badge className='rounded-full text-xs bg-[#EECE84] hover:bg-[#EECE84] text-black dark:text-white'>Saving €60</Badge>
               </div>
             </div>
             <div className="mt-4">
@@ -129,7 +129,7 @@ const SubAccount = () => {
                 <span className='text-xl'>€40/month</span>
               </div>
               <div>
-              <Badge className='rounded-full text-xs bg-yellow-500 hover:bg-yellow-500/80'>Saving €15</Badge>
+              <Badge className='rounded-full text-xs bg-[#EECE84] hover:bg-[#EECE84] text-black dark:text-white'>Saving €15</Badge>
               </div>
             </div>
             <div className="mt-4">

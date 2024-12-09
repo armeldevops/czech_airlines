@@ -60,7 +60,7 @@ const LessonCard = ({ lessonId }: { lessonId: string }) => {
               <SliderAirlines />
             </div>
           </CardContent>
-          <CardFooter className='bg-yellow-600/20 rounded-b-2xl'>
+          <CardFooter className='bg-[#EECE843D] rounded-b-2xl'>
             <span className="text-sm my-6 mb-0 flex gap-1"> 
               <User className='w-4 h-4' /> 
               {lesson.owner}
@@ -90,7 +90,7 @@ const LessonCard = ({ lessonId }: { lessonId: string }) => {
 
             <button
               onClick={handleCloseModal}
-              className="mt-4 bg-yellow-600 text-white p-2 rounded"
+              className="mt-4 bg-[#EECE84] text-white p-2 rounded"
             >
               Fermer
             </button>

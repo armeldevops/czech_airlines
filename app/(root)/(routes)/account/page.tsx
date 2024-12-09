@@ -50,14 +50,14 @@ const Page = () => {
               <span className="block text-gray-500 text-sm">armelmanombosoa@gmail.com</span>
             </div>
           </div>
-          <Button className='rounded-full bg-yellow-600/60 hover:bg-yellow-600/50 text-black'>
+          <Button className='rounded-full bg-[#EECE84] hover:bg-[#EECE84] text-black'>
             <LogOut size={20} />
             <span>Sign out</span>
           </Button>
         </div>
 
         {/* Upgrade Section */}
-        <div className="bg-yellow-600/50 rounded-3xl h-32 w-full relative overflow-hidden">
+        <div className="bg-[#EECE84] rounded-3xl h-28 w-full relative overflow-hidden">
           <Image 
             alt="Moon"
             src="/Manuals/Nuage.png"
@@ -79,12 +79,12 @@ const Page = () => {
             height={150}
             className="absolute -top-10 -left-16 opacity-80"
           />
-          <div className='flex flex-col p-8 ml-16'>
+          <div className='flex flex-col p-6 ml-16'>
             <span className=''>Subcription</span>
             <span className='text-2xl'>Free limited</span>
           </div>
           <Link href='/account/subscribe'>
-            <Button className="absolute bottom-11 right-10 rounded-full flex items-center bg-white text-black hover:bg-white/80">
+            <Button className="absolute bottom-10 right-10 rounded-full flex items-center bg-white text-black hover:bg-white/80">
               <ArrowBigUpDash />
               <span>Upgrade now</span>
             </Button>
@@ -103,7 +103,7 @@ const Page = () => {
                   <FormItem className="flex-1">
                     <FormLabel className='text-xl'>Full Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Full Name" {...field} className="rounded-2xl h-16 bg-white" />
+                      <Input placeholder="Full Name" {...field} className="rounded-full h-16 bg-white/90" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -116,7 +116,7 @@ const Page = () => {
                   <FormItem className="flex-1">
                     <FormLabel className='text-xl'>Nick Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Nick Name" {...field} className="rounded-2xl h-16 bg-white" />
+                      <Input placeholder="Nick Name" {...field} className="rounded-full h-16 bg-white/90" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -133,7 +133,7 @@ const Page = () => {
                   <FormItem className="flex-1">
                     <FormLabel className='text-xl'>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="Email" {...field} className="rounded-2xl h-16 bg-white" />
+                      <Input placeholder="Email" {...field} className="rounded-full h-16 bg-white/90" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -146,7 +146,7 @@ const Page = () => {
                   <FormItem className="flex-1">
                     <FormLabel className='text-xl'>Phone Number</FormLabel>
                     <FormControl>
-                      <Input placeholder="Phone Number" {...field} className="rounded-2xl h-16 bg-white" />
+                      <Input placeholder="Phone Number" {...field} className="rounded-full h-16 bg-white/90" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -163,7 +163,7 @@ const Page = () => {
                   <FormItem className="flex-1">
                     <FormLabel className='text-xl'>Country</FormLabel>
                     <FormControl>
-                      <Input placeholder="Country" {...field} className="rounded-2xl h-16 bg-white" />
+                      <Input placeholder="Country" {...field} className="rounded-full h-16 bg-white/90" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -176,7 +176,7 @@ const Page = () => {
                   <FormItem className="flex-1">
                     <FormLabel className='text-xl'>Language</FormLabel>
                     <FormControl>
-                      <Input placeholder="Language" {...field} className="rounded-2xl h-16 bg-white" />
+                      <Input placeholder="Language" {...field} className="rounded-full h-16 bg-white/90" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -188,7 +188,7 @@ const Page = () => {
       </div>
       {/* Delete Account Button */}
       <div className="flex justify-end gap-2 p-6">
-        <Button type="submit" className="rounded-full bg-yellow-600/60 hover:bg-yellow-600/50 text-black">
+        <Button type="submit" className="rounded-full bg-[#EECE84] hover:[#EECE84] text-black">
           <Edit />
           Save Changes
         </Button>

@@ -14,7 +14,7 @@ const Page = () => {
       <Button variant='ghost' className='hover:bg-transparent'>
         <Link href='/courses' className='flex flex-row items-center gap-1'>
           <ChevronLeft className='w-6 h-6' />
-          <span className='text-2xl'>Video</span>
+          <span className='text-2xl'>Manuals</span>
         </Link>
       </Button>
 
@@ -27,7 +27,7 @@ const Page = () => {
         <span className='text-2xl ml-2'>Chapter 1 : Basics</span>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
           {Lessons.map((lesson) => (
-            <Link key={lesson.id} href={`/courses/video/${lesson.id}`}>
+            <Link key={lesson.id} href={`/courses/manuals/${lesson.id}`}>
               <LessonCard lessonId={lesson.id} />
             </Link>
           ))}
@@ -38,7 +38,7 @@ const Page = () => {
         <span className='text-2xl ml-2'>Chapter 2 : Fly or Fly</span>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
           {Lessons.map((lesson) => (
-            <Link key={lesson.id} href={`/courses/video/${lesson.id}`}>
+            <Link key={lesson.id} href={`/courses/manuals/${lesson.id}`}>
               <LessonCard lessonId={lesson.id} />
             </Link>
           ))}
@@ -49,7 +49,7 @@ const Page = () => {
         <span className='text-2xl ml-2'>Chapter 3 : Errors</span>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
           {Lessons.map((lesson) => (
-            <Link key={lesson.id} href={`/courses/video/${lesson.id}`}>
+            <Link key={lesson.id} href={`/courses/manuals/${lesson.id}`}>
               <LessonCard lessonId={lesson.id} />
             </Link>
           ))}

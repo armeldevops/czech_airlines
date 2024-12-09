@@ -12,7 +12,7 @@ const Courses = () => {
       {/* Cards row */}
       <div className='flex flex-wrap justify-center gap-8'>
         {/* Resume Card */}
-        <Card className="w-[350px] h-[350px] sm:w-[300px] md:w-[350px] lg:w-[350px] cursor-pointer bg-gradient-to-r from-white to-foreground/20 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
+        <Card className="w-[300px] h-[300px] sm:w-[300px] sm:h-[300px] md:w-[300px] md:h-[300px] lg:w-[300px] lg:h-[300px] cursor-pointer bg-gradient-to-r from-white to-white shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
           <CardContent className="flex flex-col items-center justify-center h-full">
             <Image 
               alt='Resume'
@@ -20,13 +20,13 @@ const Courses = () => {
               width={50}
               height={50}
             />
-            <p className='text-2xl font-semibold mt-4'>Resume</p>
+            <p className='text-2xl font-semibold mt-1'>Resume</p>
           </CardContent>
         </Card>
 
         {/* Video Card */}
         <Link href='/courses/video'>
-          <Card className="w-[350px] h-[350px] sm:w-[300px] md:w-[350px] lg:w-[350px] cursor-pointer bg-gradient-to-r from-white to-foreground/20 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
+          <Card className="w-[300px] h-[300px] sm:w-[300px] md:w-[300px] lg:w-[300px] cursor-pointer bg-gradient-to-r from-white to-white shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
             <CardContent className="flex flex-col items-center justify-center h-full">
               <Image 
                 alt='Video'
@@ -34,63 +34,67 @@ const Courses = () => {
                 width={50}
                 height={50}
               />
-              <p className='text-2xl font-semibold mt-4'>Video</p>
+              <p className='text-2xl font-semibold mt-1'>Video</p>
             </CardContent>
           </Card>        
         </Link>
 
         {/* Dictionary Card */}
-        <Card className="w-[350px] h-[350px] sm:w-[300px] md:w-[350px] lg:w-[350px] cursor-pointer bg-gradient-to-r from-white to-foreground/20 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
-          <CardContent className="flex flex-col items-center justify-center h-full">
-            <Image 
-              alt='Dictionary'
-              src='/Courses/dictionary.png'
-              width={50}
-              height={50}
-            />
-            <p className='text-2xl font-semibold mt-4'>Dictionary</p>
-          </CardContent>
-        </Card>
+        <Link href='/courses/dictionnary'>
+          <Card className="w-[300px] h-[300px] sm:w-[300px] md:w-[300px] lg:w-[300px] cursor-pointer bg-gradient-to-r from-white to-white shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300">
+            <CardContent className="flex flex-col items-center justify-center h-full">
+              <Image 
+                alt='Dictionary'
+                src='/Courses/dictionary.png'
+                width={50}
+                height={50}
+              />
+              <p className='text-2xl font-semibold mt-1'>Dictionary</p>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
 
       {/* Manuals Card */}
-      <Card className="w-[350px] h-[350px] sm:w-full md:w-[800px] lg:w-[1000px] xl:w-[1110px] cursor-pointer bg-gradient-to-tr from-sky-600 to-blue-100 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-        {/* Image Moon (coin supérieur gauche) */}
-        <Image 
-          alt="Moon"
-          src="/Manuals/Nuage.png"
-          width={150}
-          height={150}
-          className="absolute -top-4 left-48 opacity-80"
-        />
-        <Image 
-          alt="Moon"
-          src="/Manuals/Nuage.png"
-          width={250}
-          height={250}
-          className="absolute top-8 -left-20 opacity-80"
-        />
-        <Image 
-          alt="Moon"
-          src="/Manuals/Nuage.png"
-          width={100}
-          height={100}
-          className="absolute top-64 left-48 opacity-80"
-        />
+      <Link href='/courses/manuals'>
+        <Card className="w-[300px] h-[300px] sm:w-full md:w-[800px] lg:w-[960px] xl:w-[960px] cursor-pointer bg-gradient-to-tr from-sky-600 to-blue-100 shadow-lg rounded-xl hover:shadow-2xl border border-none transition-all duration-300 relative overflow-hidden">
+          {/* Image Moon (coin supérieur gauche) */}
+          <Image 
+            alt="Moon"
+            src="/Manuals/Nuage.png"
+            width={150}
+            height={150}
+            className="absolute -top-4 left-48 opacity-80"
+          />
+          <Image 
+            alt="Moon"
+            src="/Manuals/Nuage.png"
+            width={250}
+            height={250}
+            className="absolute top-8 -left-20 opacity-80"
+          />
+          <Image 
+            alt="Moon"
+            src="/Manuals/Nuage.png"
+            width={100}
+            height={100}
+            className="absolute top-48 left-48 opacity-80"
+          />
 
-        {/* Image Cloud (coin supérieur droit) */}
-        <Image 
-          alt="Cloud"
-          src="/Manuals/Moon.png"
-          width={200}
-          height={200}
-          className="absolute top-4 right-4 opacity-80"
-        />
-        
-        <CardContent className="flex flex-col items-center justify-center h-full z-10">
-          <p className='text-2xl font-semibold mt-4'>Manuals</p>
-        </CardContent>
-      </Card>
+          {/* Image Cloud (coin supérieur droit) */}
+          <Image 
+            alt="Cloud"
+            src="/Manuals/Moon.png"
+            width={200}
+            height={200}
+            className="absolute top-4 right-4 opacity-80"
+          />
+          
+          <CardContent className="flex flex-col items-center justify-center h-full z-10">
+            <p className='text-2xl font-semibold mt-4'>Manuals</p>
+          </CardContent>
+        </Card>
+      </Link>
     </div>
   )
 }
