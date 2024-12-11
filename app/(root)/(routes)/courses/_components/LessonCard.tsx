@@ -1,13 +1,11 @@
 'use client'
 
-// LessonCard.tsx
 import { SliderAirlines } from "@/components/Sliders";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lesson, Lessons } from "@/lib/lesson";
 import { User } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 
 // Fonction pour récupérer une leçon par son ID
 const getLessonById = (id: string): Lesson | undefined => {
@@ -16,10 +14,10 @@ const getLessonById = (id: string): Lesson | undefined => {
 
 const LessonCard = ({ lessonId }: { lessonId: string }) => {
   const lesson = getLessonById(lessonId);
-  const [isModalOpen, setIsModalOpen] = useState(false); // Gérer l'état du modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (!lesson) {
-    return <div>Leçon non trouvée</div>; // Affichage si la leçon n'est pas trouvée
+    return <div>Leçon non trouvée</div>;
   }
 
   // Ouvrir la modal
@@ -37,36 +35,34 @@ const LessonCard = ({ lessonId }: { lessonId: string }) => {
   return (
     <>
       <Card className="w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200">
-        <Link key={lesson.id} href={`/courses/video/${lesson.id}`}>
-          <CardHeader className='flex flex-row justify-between items-center'>
-            <CardTitle className="text-xl font-semibold">{lesson.stage}</CardTitle>
-            <CardTitle className="text-sm font-semibold text-gray-500">{lesson.type}</CardTitle>
-            <CardTitle className="text-sm font-semibold text-gray-500">{lesson.createdAt}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-500">{lesson.description}</span>
-              <Image
-                alt="Video"
-                src="/Courses/Resume.png"
-                width={50}
-                height={50}
-                className="cursor-pointer"
-                onClick={handleImageClick} // Ouvre la modal sans rediriger
-              />
-            </div>
-            <div className="w-full mt-4 flex flex-col justify-between items-end gap-2">
-              <span className="items-end text-gray-500">{lesson.progress}%</span>
-              <SliderAirlines />
-            </div>
-          </CardContent>
-          <CardFooter className='bg-[#EECE843D] rounded-b-2xl'>
-            <span className="text-sm my-6 mb-0 flex gap-1"> 
-              <User className='w-4 h-4' /> 
-              {lesson.owner}
-            </span>
-          </CardFooter>
-        </Link>
+        <CardHeader className='flex flex-row justify-between items-center'>
+          <CardTitle className="text-xl font-semibold">{lesson.stage}</CardTitle>
+          <CardTitle className="text-sm font-semibold text-gray-500">{lesson.type}</CardTitle>
+          <CardTitle className="text-sm font-semibold text-gray-500">{lesson.createdAt}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-500">{lesson.description}</span>
+            <Image
+              alt="Video"
+              src="/Courses/Resume.png"
+              width={50}
+              height={50}
+              className="cursor-pointer"
+              onClick={handleImageClick} // Ouvre la modal sans rediriger
+            />
+          </div>
+          <div className="w-full mt-4 flex flex-col justify-between items-end gap-2">
+            <span className="items-end text-gray-500">{lesson.progress}%</span>
+            <SliderAirlines />
+          </div>
+        </CardContent>
+        <CardFooter className='bg-[#EECE843D] rounded-b-2xl'>
+          <span className="text-sm my-6 mb-0 flex gap-1"> 
+            <User className='w-4 h-4' /> 
+            {lesson.owner}
+          </span>
+        </CardFooter>
       </Card>
 
       {/* Modal pour afficher la vidéo de la leçon */}

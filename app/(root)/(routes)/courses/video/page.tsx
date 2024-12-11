@@ -1,5 +1,5 @@
 import SearchBar from '@/components/SearcBar'
-import { SelectVideo } from '@/components/Select'
+import { SelectVideo } from '@/components/SelectVideo'
 import { Button } from '@/components/ui/button'
 import { Lessons } from '@/lib/lesson'
 import { ChevronLeft } from 'lucide-react'

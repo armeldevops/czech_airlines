@@ -3,7 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme";
 
-const font = Urbanist({ subsets: ['latin'], weight: '600' })
+const font = Urbanist({ subsets: ['latin']})
 
 export const metadata: Metadata = {
   title: "ATPS 2",

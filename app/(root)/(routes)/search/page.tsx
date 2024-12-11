@@ -1,7 +1,7 @@
 'use client'
 
 import SearchBar from '@/components/SearcBar';
-import { SelectVideo } from '@/components/Select';
+import { SelectVideo } from '@/components/SelectVideo';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 

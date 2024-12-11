@@ -2,21 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import Image from "next/image"; // Importer pour gérer les images
-import Courses from "@/public/Yellow/Courses.png";
-import CoursesBlack from "@/public/Black/Courses.png";
-import Questions from "@/public/Yellow/square.png";
-import QuestionsBlack from "@/public/Black/square.png";
-import Support from "@/public/Yellow/support.png";
-import SupportBlack from "@/public/Black/supports.png";
-import LayoutGrid from "@/public/Yellow/layout.png";
-import LayoutGridBlack from "@/public/Black/layout.png";
-import Search from "@/public/Yellow/search.png";
-import SearchBlack from "@/public/Black/search.png";
-import UserRound from "@/public/Yellow/user.png";
-import UserRoundBlack from "@/public/Black/user.png";
 import { ModeToggle } from "./mode";
 import Link from "next/link";
+import { FileQuestion, Headset, LayoutGrid, Search, TvMinimalPlay, UserRound } from "lucide-react";
+import Image from "next/image";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -25,37 +14,31 @@ const Sidebar = () => {
   const routes = [
     {
       icon: LayoutGrid,
-      iconBlack: LayoutGridBlack,
       href: '/',
       label: 'Dashboard',
     },
     {
-      icon: Courses,
-      iconBlack: CoursesBlack,
+      icon: TvMinimalPlay,
       href: '/courses',
       label: 'Courses',
     },
     {
-      icon: Questions,
-      iconBlack: QuestionsBlack,
+      icon: FileQuestion,
       href: '/questions-bank',
       label: 'Questions Bank',
     },
     {
       icon: Search,
-      iconBlack: SearchBlack,
       href: '/search',
       label: 'Search',
     },
     {
       icon: UserRound,
-      iconBlack: UserRoundBlack,
       href: '/account',
       label: 'Account',
     },
     {
-      icon: Support,
-      iconBlack: SupportBlack,
+      icon: Headset,
       href: '/support',
       label: 'Support',
     },
@@ -84,16 +67,23 @@ const Sidebar = () => {
             className="block group-hover:hidden transition-opacity duration-300"
           />
         </Link>
+
         {/* Image au survol (visible seulement en hover) */}
-        <Link href='/'>
-          <Image
-            src="/atps.png"
-            height={120}
-            width={120}
-            alt="ATPS Logo"
-            className="hidden group-hover:block transition-opacity duration-300"
-          />
-        </Link>
+        <div className="hidden group-hover:block transition-opacity duration-300">
+          <Link href='/' className="flex flex-row text-xs items-center justify-center space-x-1">
+            <Image
+              src="/atps.png"
+              height={80}
+              width={80}
+              alt="ATPS Logo"
+            />
+            <span className="text-3xl text-white/70">|</span>
+            <div className="flex flex-col items-start justify-start mt-0.5">
+              <span>Air Transport Pilot</span>
+              <span>School</span>
+            </div>
+          </Link>
+        </div>
       </div>
 
       {/* Navigation */}
@@ -108,22 +98,11 @@ const Sidebar = () => {
                 pathname === route.href && "bg-primary/10 text-[#EECE84] shadow"
               )}
             >
-              {/* Icon - Image noire par défaut */}
-              <Image
-                src={route.iconBlack}
-                alt={route.label}
+              {/* Icon */}
+              <route.icon
                 className={cn(
-                  "h-7 w-7 mr-0 group-hover:mr-3 transition-all duration-300 group-hover:hidden",
-                  pathname === route.href && "hidden"
-                )}
-              />
-              {/* Icon - Image jaune au survol et quand actif */}
-              <Image
-                src={route.icon}
-                alt={route.label}
-                className={cn(
-                  "h-7 w-7 mr-0 group-hover:mr-3 transition-all duration-300 hidden group-hover:block",
-                  pathname === route.href && "block"
+                  "h-7 w-7 mr-0 group-hover:mr-3",
+                  pathname === route.href ? "text-[#EECE84]" : "hover:text-[#EECE84]"
                 )}
               />
               {/* Label */}

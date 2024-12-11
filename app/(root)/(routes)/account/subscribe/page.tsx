@@ -10,7 +10,7 @@ const SubAccount = () => {
       <Button variant='ghost' className='hover:bg-transparent'>
         <Link href='/account' className='flex flex-row items-center gap-1'>
           <ChevronLeft className='w-6 h-6' />
-          <span className='text-2xl'>BBack to Profile</span>
+          <span className='text-2xl'>Back to Profile</span>
         </Link>
       </Button>
 
