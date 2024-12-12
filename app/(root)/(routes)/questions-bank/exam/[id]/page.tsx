@@ -186,10 +186,10 @@ const ExamId = () => {
                     key={index}
                     onClick={() => handleOptionClick(index)}
                     className={`w-full flex items-center justify-start p-5 rounded-3xl border-2 transition-all bg-white ${
-                      selectedAnswer === index ? 'border-green-500 bg-green-500' : 'border-gray-300/20'
+                      selectedAnswer === index ? 'border-green-500 text-green-500' : 'border-gray-300/20'
                     }`}
                   >
-                    <span className="mr-4 rounded-full border border-primary/80 p-4 flex items-center justify-center h-4 w-4 ">
+                    <span className={`mr-4 rounded-full ${ selectedAnswer === index ? 'border border-green-500' : 'border border-primary' } p-4 flex items-center justify-center h-4 w-4`}>
                       {index + 1}
                     </span>
                     <span>{option}</span>
